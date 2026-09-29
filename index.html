@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -200,6 +201,239 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card-footer-bar">
+                        <span id="outColorLabel">Active</span>
+                        <span class="card-id-num">ID-#<span id="outRandomId">8492</span></span>
+                    </div>
+                </div>
+
+                <div class="output-actions">
+                    <button type="button" id="copySummaryBtn" class="secondary-btn" disabled>
+                        <i class="fa-solid fa-copy"></i> Copy Summary Text
+                    </button>
+                    <span id="copyFeedback" class="copy-feedback"></span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional User Info Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <div class="container">
+       
+        <header class="header">
+            <div class="logo-icon"><i class="fa-solid fa-id-card-clip"></i></div>
+            <h1>User Info Card</h1>
+            <p>Please fill out all fields.</p>
+        </header>
+
+        <main class="main-grid">
+           
+            <section class="card form-section">
+                <h2><i class="fa-solid fa-pen-to-square"></i> Enter Details</h2>
+                <form id="userInfoForm">
+                    
+                  
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="fullName" placeholder="e.g. king koy" required>
+                        </div>
+                    </div>
+
+                  
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="e.g. kingkoy@example.com" required>
+                        </div>
+                    </div>
+
+                   
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <input type="number" id="age" min="1" max="120" placeholder="e.g. 21">
+                        </div>
+                    </div>
+
+                   
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="phone" placeholder="e.g. +1 (555) 019-2834">
+                        </div>
+                    </div>
+
+
+                   
+                    <div class="input-group full-width">
+                        <label for="address">Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input type="text" id="address" placeholder="e.g. 123 University Ave, City">
+                        </div>
+                    </div>
+
+                
+                    <div class="input-group">
+                        <label for="course">Course</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <input type="text" id="course" placeholder="e.g. Bachelor of Science in Computer Science">
+                        </div>
+                    </div>
+
+                  
+                    <div class="input-group">
+                        <label for="yearLevel">Year Level</label>
+                        <div class="input-wrapper select-wrapper">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <select id="yearLevel">
+                                <option value="" disabled selected>Select Year Level</option>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                                <option value="Irregular">Irregular</option>
+                                <optgroup label="Graduate">
+                                    <option value="Graduate">Graduate</option>
+                                    <optgroup label="Postgraduate">
+                                        <option value="Master's">Master's</option>
+                                        <option value="Doctorate">Doctorate</option>
+                                    </optgroup>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                   
+                    <div class="input-group">
+                        <label for="birthDate">Birth Date</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="date" id="birthDate">
+                        </div>
+                    </div>
+
+                    
+                    <div class="input-group">
+                        <label for="favColorSelect">Favorite Color</label>
+                        <div class="input-wrapper select-wrapper">
+                            <i class="fa-solid fa-palette"></i>
+                            <select id="favColorSelect">
+                                <option value="" disabled selected>Select Color</option>
+                                <option value="#3b82f6">Blue</option>
+                                <option value="#10b981">Emerald</option>
+                                <option value="#8b5cf6">Purple</option>
+                                <option value="#f59e0b">Amber</option>
+                                <option value="#ef4444">Red</option>
+                            </select>
+                        </div>
+                    </div>
+
+                  
+                    <div class="input-group full-width">
+                        <label for="hobbies">Hobbies</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-heart"></i>
+                            <input type="text" id="hobbies" placeholder="e.g. Coding, Reading, Gaming, Photography">
+                        </div>
+                    </div>
+
+                    
+                    <div class="input-group full-width">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Male"> Male
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Female"> Female
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Other"> Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="button-container full-width">
+                        <button type="button" id="submitBtn" class="primary-btn">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Show My Info
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card output-section">
+                <h2><i class="fa-solid fa-address-card"></i> My Information</h2>
+                
+                <div id="outputCard" class="user-id-card default-state">
+                    <div class="card-top-bar">
+                        <span class="badge" id="outYearBadge">Year Level</span>
+                        <span class="status-indicator" id="outCourseBadge">Course / Program</span>
+                    </div>
+
+                    <div class="card-avatar-area">
+                        <div class="avatar-circle" id="outAvatarInitials">U</div>
+                    </div>
+
+                    <div class="card-body-content">
+                        <h3 id="outFullName">Full Name</h3>
+                        <p class="card-job" id="outEmailDisplay">email@example.com</p>
+                        <p class="card-bio" id="outHobbiesDisplay">Hobbies: --</p>
+
+                        <div class="card-details-grid">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <span>Age: <strong id="outAge">--</strong></span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span id="outPhone">--</span>
+                            </div>
+                            
+                            <div class="detail-item full-detail">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span id="outAddress">--</span>
+                            </div>
+
+
+                            <div class="detail-item">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span id="outBirthDate">--</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-venus-mars"></i>
+                                <span>Gender: <strong id="outGender">--</strong></span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-palette"></i>
+                                <span>Color:</span> <span id="outFavoriteColor">--</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+
 
                     <div class="card-footer-bar">
                         <span id="outColorLabel">Active</span>
