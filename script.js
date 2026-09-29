@@ -104,4 +104,3 @@ Gender: ${document.getElementById('outGender').textContent}
         return `rgba(${(num >> 16) & 255}, ${(num >> 8) & 255}, ${num & 255}, ${alpha})`;
     }
 })
-})
